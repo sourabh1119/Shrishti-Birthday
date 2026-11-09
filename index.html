@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Srishti! 🌸</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: radial-gradient(circle at top left, #fff0f6 0%, #ffe4ef 45%, #fce7f3 80%, #f5d0fe 100%);
+      color: #4a152b;
+    }
+    .mono { font-family: 'JetBrains Mono', monospace; }
+    .handwriting { font-family: 'Caveat', cursive; }
+    .glass {
+      background: rgba(255, 255, 255, 0.82);
+      backdrop-filter: blur(16px);
+      border: 1.5px solid rgba(244, 114, 182, 0.35);
+      box-shadow: 0 10px 30px -8px rgba(236, 72, 153, 0.14);
+    }
+    .glass-pink {
+      background: linear-gradient(135deg, rgba(255, 228, 240, 0.92) 0%, rgba(252, 231, 243, 0.88) 100%);
+      backdrop-filter: blur(16px);
+      border: 2px solid rgba(244, 63, 94, 0.35);
+    }
+    .glow-pink {
+      box-shadow: 0 14px 35px -8px rgba(244, 63, 94, 0.28);
+    }
+    .beam {
+      position: absolute;
+      width: 90px;
+      height: 220px;
+      background: linear-gradient(180deg, rgba(255,255,200,0.9) 0%, rgba(255,255,150,0.2) 70%, transparent 100%);
+      clip-path: polygon(30% 0%, 70% 0%, 100% 100%, 0% 100%);
+      pointer-events: none;
+      filter: blur(3px);
+      transition: opacity 0.2s ease;
+    }
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-8px) rotate(4deg); }
+    }
+    .float-decor { animation: floatSlow 4s ease-in-out infinite; }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col items-center p-4 md:p-8 selection:bg-pink-500 selection:text-white relative overflow-x-hidden">
+
+  <!-- Soft Girlish Background Glows & Floating Accents -->
+  <div class="fixed top-0 left-1/4 w-96 h-96 bg-pink-300/40 rounded-full blur-3xl pointer-events-none -z-10"></div>
+  <div class="fixed bottom-10 right-1/4 w-96 h-96 bg-rose-300/35 rounded-full blur-3xl pointer-events-none -z-10"></div>
+  <div class="fixed top-16 right-8 text-2xl opacity-35 pointer-events-none select-none float-decor">🎀</div>
+  <div class="fixed bottom-20 left-8 text-2xl opacity-35 pointer-events-none select-none float-decor" style="animation-delay: 1.5s;">🌸</div>
+
+  <!-- Main Container -->
+  <main class="w-full max-w-3xl space-y-6">
+
+    <!-- HEADER: PERSONAL & SWEET -->
+    <header class="glass rounded-3xl p-6 md:p-7 relative overflow-hidden">
+      <div class="absolute -right-8 -top-8 w-36 h-36 bg-pink-400/15 rounded-full blur-xl"></div>
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-pink-200/80 pb-5">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-pink-100 border border-pink-300 text-pink-700 text-xs font-bold tracking-wide mb-2">
+            <span class="w-2 h-2 rounded-full bg-pink-500 animate-pulse"></span> 🎀 Special Birthday Audit • 12 Nov
+          </div>
+          <h1 class="text-2xl md:text-3xl font-extrabold tracking-tight bg-gradient-to-r from-rose-600 via-pink-600 to-fuchsia-600 bg-clip-text text-transparent">
+            Happy Birthday, Srishti! 🌸✨
+          </h1>
+          <p class="text-rose-900/75 text-xs md:text-sm mt-1">
+            Client: <span class="text-rose-950 font-bold">Srishti Arora</span> 💖 • Auditor in-charge: <span class="font-semibold text-pink-700">Sr Developer - Sourabh</span>
+          </p>
+        </div>
+        <div class="text-left md:text-right">
+          <span class="inline-block px-3 py-1.5 rounded-full bg-rose-100 border border-rose-300 text-rose-700 font-mono text-xs font-bold">
+            ✨ ZERO GAPS • 100% PURE SOUL
+          </span>
+        </div>
+      </div>
+
+      <!-- 4 Personality Cards -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-5">
+        <div class="p-3.5 rounded-2xl bg-pink-50/90 border border-pink-200 text-center sm:text-left">
+          <p class="text-xs text-pink-700/75 font-semibold">💭 Overthinker</p>
+          <p class="text-base md:text-lg font-extrabold text-rose-600 mt-0.5">Bohot</p>
+        </div>
+        <div class="p-3.5 rounded-2xl bg-rose-50/90 border border-rose-200 text-center sm:text-left">
+          <p class="text-xs text-rose-700/75 font-semibold">🍓 Sweet</p>
+          <p class="text-base md:text-lg font-extrabold text-pink-600 mt-0.5">Bohot zada</p>
+        </div>
+        <div class="p-3.5 rounded-2xl bg-fuchsia-50/90 border border-fuchsia-200 text-center sm:text-left">
+          <p class="text-xs text-fuchsia-700/75 font-semibold">🫖 Chai Paglu</p>
+          <p class="text-base md:text-lg font-extrabold text-fuchsia-600 mt-0.5">Bohot Bohot zada</p>
+        </div>
+        <div class="p-3.5 rounded-2xl bg-pink-50/90 border border-pink-200 text-center sm:text-left">
+          <p class="text-xs text-pink-700/75 font-semibold">👼 Dil Ki Saaf</p>
+          <p class="text-base md:text-lg font-extrabold text-rose-600 mt-0.5">Bohot Bohot Bohot Zada</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- SECTION 1: BIRTHDAY GIFT (PINK THAR) -->
+    <section class="glass-pink glow-pink rounded-3xl p-6 text-center relative overflow-hidden">
+      <div class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-white/85 border border-pink-300 text-pink-600 text-xs font-bold mb-3 shadow-sm">
+        🎀 DREAM RIDE DELIVERY 🎀
+      </div>
+      <h2 class="text-xl md:text-2xl font-extrabold text-rose-950">Ek Chota Sa Birthday Surprise! 💝</h2>
+      <p class="text-rose-900/80 max-w-md mx-auto text-xs md:text-sm mt-1.5">
+        Kyuki hmari sweet & masoom si dost ko road presence poori chahiye!
+      </p>
+
+      <button id="claimGiftBtn" class="mt-4 px-7 py-3.5 rounded-2xl bg-gradient-to-r from-pink-500 via-rose-500 to-fuchsia-500 hover:from-pink-600 hover:to-rose-600 text-white font-bold text-base shadow-lg shadow-pink-500/30 transition-all transform hover:scale-105 active:scale-95 flex items-center justify-center gap-2.5 mx-auto">
+        <span>🎁</span>
+        <span>Open Your Birthday Gift</span>
+        <span class="animate-bounce">🎀</span>
+      </button>
+    </section>
+
+    <!-- SECTION 2: HEARTFELT OBSERVATIONS -->
+    <section class="glass rounded-3xl p-6 relative overflow-hidden">
+      <div class="flex items-center justify-between gap-2 border-b border-pink-200/80 pb-3.5 mb-4">
+        <div>
+          <span class="text-xs font-mono font-bold text-pink-600 uppercase">💌 Personal Audit Notes</span>
+          <h2 class="text-xl font-bold text-rose-950 mt-0.5">Dil Se Observations 💬</h2>
+        </div>
+        <span id="jokeCounterTag" class="px-3 py-1 rounded-full bg-pink-100 border border-pink-300 text-pink-700 font-mono text-xs font-bold">
+          Note #1 of 2
+        </span>
+      </div>
+
+      <div class="p-5 rounded-2xl bg-gradient-to-br from-pink-50/95 to-rose-50/95 border border-pink-200 flex flex-col justify-between gap-4">
+        <div>
+          <span id="jokeTitle" class="text-xs font-mono uppercase tracking-wider text-rose-600 font-bold block mb-1.5">
+            🕵️‍♀️ Observation #1: Deloitte ne ek Masoom bachhe ko overburden kr rkha
+          </span>
+          <p id="jokeBody" class="text-rose-950 text-sm md:text-base leading-relaxed font-medium">
+            "Chutti Vaale din bi Srishti ko kaam krna pdtaaa.. kamchori sikhani pdegi 🤫"
+          </p>
+        </div>
+
+        <div class="flex items-center justify-between pt-3 border-t border-pink-200/70">
+          <span class="text-xs text-pink-700 font-mono font-semibold" id="jokeRiskTag">Priority: More Chutti Needed 🌸</span>
+          <button id="nextJokeBtn" class="px-4 py-2 rounded-xl bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 active:scale-95 text-white font-bold text-xs transition-all flex items-center gap-1.5 shadow-md shadow-pink-500/20">
+            <span>✨ Next Note</span>
+            <span>→</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: BIRTHDAY SONG (0:00 - 01:18) -->
+    <section class="glass rounded-3xl p-6">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+        <div>
+          <span class="text-xs font-mono font-bold tracking-wider text-pink-600 uppercase">🎶 Dedicated Track</span>
+          <h2 class="text-xl md:text-2xl font-bold text-rose-950 mt-1">Happiee Birthdayyy Mere Priye Dost &#128046; 💖</h2>
+          <p class="text-rose-800/80 text-xs md:text-sm">"Cake Shake hai to bulao ji... Aise hi na gungunao ji!"</p>
+        </div>
+        <span class="text-xs px-3 py-1 rounded-full bg-pink-100 border border-pink-300 text-pink-700 font-mono font-bold self-start sm:self-auto">
+          Keep Smiling 😁🌸
+        </span>
+      </div>
+
+      <!-- Audio Element configured to stop at 78s (01:18) -->
+      <audio id="birthdaySong" preload="auto">
+        <source src="Happy Birthday To You Ji - DjBaap.mp3" type="audio/mpeg">
+        <source src="birthday_song.mp3" type="audio/mpeg">
+      </audio>
+
+      <!-- Music Player Box -->
+      <div class="p-5 rounded-2xl bg-gradient-to-b from-pink-50/90 to-rose-100/70 border border-pink-200 flex flex-col items-center text-center">
+        
+        <!-- Animated Equalizer Bars -->
+        <div id="equalizer" class="flex items-end justify-center gap-1.5 h-10 mb-3 opacity-50 transition-opacity duration-300">
+          <div class="w-1.5 bg-rose-500 rounded-full h-3 transition-all"></div>
+          <div class="w-1.5 bg-pink-500 rounded-full h-6 transition-all"></div>
+          <div class="w-1.5 bg-fuchsia-400 rounded-full h-9 transition-all"></div>
+          <div class="w-1.5 bg-rose-400 rounded-full h-5 transition-all"></div>
+          <div class="w-1.5 bg-pink-400 rounded-full h-8 transition-all"></div>
+          <div class="w-1.5 bg-rose-500 rounded-full h-4 transition-all"></div>
+          <div class="w-1.5 bg-fuchsia-500 rounded-full h-9 transition-all"></div>
+          <div class="w-1.5 bg-pink-600 rounded-full h-6 transition-all"></div>
+        </div>
+
+        <!-- Lyrics Display Screen -->
+        <div class="w-full max-w-lg min-h-[60px] flex items-center justify-center p-3 rounded-2xl bg-white/90 border border-pink-200 mb-4 shadow-sm">
+          <p id="serenadeLyric" class="text-xs md:text-sm font-bold text-rose-600">
+            🎵 Click play and sing along! 💕
+          </p>
+        </div>
+
+        <!-- Progress Bar (0:00 to 01:18) -->
+        <div class="w-full max-w-md mb-4">
+          <div class="flex justify-between text-xs font-mono text-rose-700/80 mb-1">
+            <span id="currentTimeLabel">0:00</span>
+            <span class="text-pink-600 font-bold">01:18</span>
+          </div>
+          <div class="w-full h-2 bg-pink-200/80 rounded-full overflow-hidden">
+            <div id="audioProgressBar" class="h-full bg-gradient-to-r from-pink-500 via-rose-500 to-fuchsia-500 w-0 transition-all duration-200"></div>
+          </div>
+        </div>
+
+        <!-- Play Button -->
+        <button id="playSongBtn" class="px-6 py-2.5 rounded-2xl bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 active:scale-95 text-white font-bold text-xs md:text-sm transition-all flex items-center gap-2 shadow-md shadow-rose-500/25">
+          <span id="playIcon">▶️</span>
+          <span id="playBtnText">Play Birthday Song</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- FOOTER: WARM & MEANINGFUL WISH -->
+    <footer class="glass rounded-3xl p-6 text-center md:text-left">
+      <div class="text-rose-900/90 text-xs md:text-sm leading-relaxed space-y-1.5">
+        <p>🌸 <strong>Today's Only Rule:</strong> No laptop logins, no work stress, and zero overthinking today.</p>
+        <p>💖 <strong>Always Remember:</strong> Stay the sweet, genuine soul you are—duniya me tumhare jaise achii insan bohot kam hote hain.</p>
+        <p class="handwriting text-2xl md:text-3xl text-rose-600 pt-2">
+          Wishing you the happiest, peaceful, and warmest birthday, Srishti! Keep smiling always 🌻✨
+        </p>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- ==================== PINK MAHINDRA THAR MODAL ==================== -->
+  <div id="giftModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-rose-950/60 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
+    <div class="bg-white border-2 border-pink-400 rounded-3xl w-full max-w-xl max-h-[92vh] overflow-y-auto p-6 relative glow-pink transform scale-95 transition-transform duration-300" id="modalCard">
+      
+      <!-- Close Button -->
+      <button id="closeModalBtn" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-pink-100 hover:bg-pink-200 text-rose-700 flex items-center justify-center font-bold text-sm">
+        ✕
+      </button>
+
+      <div class="text-center mb-4">
+        <span class="inline-block px-3 py-1 rounded-full bg-pink-100 border border-pink-300 text-pink-700 font-mono text-xs font-bold uppercase mb-1.5">
+          🎀 Future Pookie Thar Owner 🎀
+        </span>
+        <h3 class="text-2xl font-extrabold text-rose-950">Hot Pink Mahindra Thar 4x4</h3>
+        <p class="text-rose-800/80 text-xs mt-0.5">"Auditor hmari sweet si masoom si... lekin road presence poori chahiye xP!"</p>
+      </div>
+
+      <!-- FRONT-FACING PINK MAHINDRA THAR SVG -->
+      <div class="relative w-full max-w-sm mx-auto aspect-[4/3] bg-gradient-to-b from-rose-950 via-pink-900 to-rose-950 rounded-2xl p-4 flex items-center justify-center border-2 border-pink-300 overflow-hidden shadow-inner">
+        
+        <!-- Dipper Light Beams -->
+        <div id="beamLeft" class="beam left-[22%] top-[56%] -rotate-12 opacity-0"></div>
+        <div id="beamRight" class="beam right-[22%] top-[56%] rotate-12 opacity-0"></div>
+
+        <svg viewBox="0 0 400 320" class="w-full h-full drop-shadow-2xl" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="tharPink" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#ff2a85"/>
+              <stop offset="50%" stop-color="#f43f5e"/>
+              <stop offset="100%" stop-color="#be185d"/>
+            </linearGradient>
+            <linearGradient id="tharBlack" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#2d3748"/>
+              <stop offset="100%" stop-color="#111827"/>
+            </linearGradient>
+            <linearGradient id="glassGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.5"/>
+              <stop offset="100%" stop-color="#0284c7" stop-opacity="0.8"/>
+            </linearGradient>
+            <radialGradient id="headlightGlow">
+              <stop offset="0%" stop-color="#ffffff"/>
+              <stop offset="60%" stop-color="#fef08a"/>
+              <stop offset="100%" stop-color="#ca8a04"/>
+            </radialGradient>
+          </defs>
+
+          <!-- GIANT PINK ROOF BOW -->
+          <g transform="translate(200, 32)">
+            <ellipse cx="-22" cy="0" rx="20" ry="10" fill="#fb7185" transform="rotate(-20 -22 0)"/>
+            <ellipse cx="22" cy="0" rx="20" ry="10" fill="#fb7185" transform="rotate(20 22 0)"/>
+            <circle cx="0" cy="0" r="8" fill="#f43f5e"/>
+            <path d="M-6,6 Q-18,24 -24,32" stroke="#f43f5e" stroke-width="4" fill="none"/>
+            <path d="M6,6 Q18,24 24,32" stroke="#f43f5e" stroke-width="4" fill="none"/>
+          </g>
+
+          <!-- TIRES -->
+          <rect x="42" y="170" width="48" height="120" rx="10" fill="#111827" stroke="#374151" stroke-width="3"/>
+          <rect x="310" y="170" width="48" height="120" rx="10" fill="#111827" stroke="#374151" stroke-width="3"/>
+          <path d="M42,190 H52 M42,210 H52 M42,230 H52 M42,250 H52 M42,270 H52" stroke="#4b5563" stroke-width="3"/>
+          <path d="M348,190 H358 M348,210 H358 M348,230 H358 M348,250 H358 M348,270 H358" stroke="#4b5563" stroke-width="3"/>
+
+          <!-- CABIN ROOF & WINDSHIELD -->
+          <path d="M96,65 L304,65 L296,132 L104,132 Z" fill="#1e293b" stroke="#0f172a" stroke-width="3"/>
+          <path d="M106,72 L294,72 L288,126 L112,126 Z" fill="url(#glassGradient)" stroke="#0284c7" stroke-width="2"/>
+          <line x1="200" y1="72" x2="200" y2="126" stroke="#0f172a" stroke-width="2"/>
+          <line x1="140" y1="126" x2="165" y2="92" stroke="#0f172a" stroke-width="3"/>
+          <line x1="235" y1="126" x2="260" y2="92" stroke="#0f172a" stroke-width="3"/>
+
+          <!-- SIDE MIRRORS -->
+          <rect x="66" y="105" width="24" height="34" rx="4" fill="#0f172a"/>
+          <line x1="90" y1="122" x2="104" y2="122" stroke="#0f172a" stroke-width="3"/>
+          <rect x="310" y="105" width="24" height="34" rx="4" fill="#0f172a"/>
+          <line x1="296" y1="122" x2="310" y2="122" stroke="#0f172a" stroke-width="3"/>
+
+          <!-- HOOD -->
+          <polygon points="80,132 320,132 328,175 72,175" fill="url(#tharPink)" stroke="#9f1239" stroke-width="2"/>
+          <polygon points="135,133 265,133 270,172 130,172" fill="#e11d48" opacity="0.6"/>
+          <rect x="88" y="165" width="8" height="12" rx="2" fill="#0f172a"/>
+          <rect x="304" y="165" width="8" height="12" rx="2" fill="#0f172a"/>
+
+          <!-- 7-SLOT GRILL -->
+          <rect x="82" y="172" width="236" height="68" rx="8" fill="#18181b" stroke="#09090b" stroke-width="3"/>
+          <rect x="136" y="180" width="10" height="48" rx="5" fill="#27272a"/>
+          <rect x="156" y="180" width="10" height="48" rx="5" fill="#27272a"/>
+          <rect x="176" y="180" width="10" height="48" rx="5" fill="#27272a"/>
+          <rect x="195" y="180" width="10" height="48" rx="5" fill="#f43f5e"/>
+          <rect x="214" y="180" width="10" height="48" rx="5" fill="#27272a"/>
+          <rect x="234" y="180" width="10" height="48" rx="5" fill="#27272a"/>
+          <rect x="254" y="180" width="10" height="48" rx="5" fill="#27272a"/>
+
+          <!-- HEADLIGHTS -->
+          <circle cx="106" cy="202" r="22" fill="#3f3f46" stroke="#71717a" stroke-width="3"/>
+          <circle id="lightLeft" cx="106" cy="202" r="17" fill="url(#headlightGlow)"/>
+          <circle cx="294" cy="202" r="22" fill="#3f3f46" stroke="#71717a" stroke-width="3"/>
+          <circle id="lightRight" cx="294" cy="202" r="17" fill="url(#headlightGlow)"/>
+
+          <!-- INDICATORS & BUMPER -->
+          <rect x="65" y="180" width="12" height="20" rx="3" fill="#f59e0b"/>
+          <rect x="323" y="180" width="12" height="20" rx="3" fill="#f59e0b"/>
+          <polygon points="52,240 348,240 336,280 64,280" fill="url(#tharBlack)" stroke="#030712" stroke-width="2"/>
+          <circle cx="105" cy="260" r="8" fill="#fef08a" stroke="#475569" stroke-width="2"/>
+          <circle cx="295" cy="260" r="8" fill="#fef08a" stroke="#475569" stroke-width="2"/>
+          <rect x="140" y="275" width="14" height="12" rx="3" fill="#dc2626"/>
+          <rect x="246" y="275" width="14" height="12" rx="3" fill="#dc2626"/>
+
+          <!-- NUMBER PLATE -->
+          <rect x="148" y="248" width="104" height="22" rx="3" fill="#ffffff" stroke="#000000" stroke-width="1.5"/>
+          <text x="200" y="264" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="900" fill="#000000" text-anchor="middle">
+            DL 01 POOKIE 12
+          </text>
+        </svg>
+      </div>
+
+      <!-- Thar Controls -->
+      <div class="flex flex-wrap items-center justify-center gap-2.5 mt-4">
+        <button id="hornBtn" class="px-4 py-2 rounded-xl bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 active:scale-95 text-white font-bold text-xs transition-all flex items-center gap-1.5 shadow-md shadow-pink-500/20">
+          <span>📢</span> Honk "Beep Beep"
+        </button>
+        <button id="dipperBtn" class="px-4 py-2 rounded-xl bg-pink-100 hover:bg-pink-200 active:scale-95 text-rose-800 font-bold text-xs transition-all flex items-center gap-1.5 border border-pink-300">
+          <span>💡</span> Dipper Lights
+        </button>
+        <button id="miniCooperToggle" class="px-4 py-2 rounded-xl bg-fuchsia-100 hover:bg-fuchsia-200 text-fuchsia-700 font-bold text-xs transition-all border border-fuchsia-300">
+          🚗 Switch to Mini Cooper?
+        </button>
+      </div>
+
+      <!-- Mini Cooper Error Notice -->
+      <p id="cooperNotice" class="text-xs text-rose-600 font-mono font-semibold mt-3 text-center hidden">
+        ⚠️ Error 404: Mini Cooper aukat se bahar hai filhal! Pookie.. Thar se kaam chalao 🤭🎀
+      </p>
+
+    </div>
+  </div>
+
+  <!-- Interactive Logic -->
+  <script>
+    const AudioContext = window.AudioContext || window.webkitAudioContext;
+    let audioCtx = null;
+    function getAudioCtx() {
+      if (!audioCtx) audioCtx = new AudioContext();
+      if (audioCtx.state === 'suspended') audioCtx.resume();
+      return audioCtx;
+    }
+
+    function pinkConfetti(opts = {}) {
+      confetti({
+        colors: ['#ff2a85', '#f43f5e', '#fb7185', '#f472b6', '#e879f9', '#fbbf24'],
+        ...opts
+      });
+    }
+
+    function playHornSound() {
+      const ctx = getAudioCtx();
+      const now = ctx.currentTime;
+      [415, 520].forEach(freq => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'sawtooth';
+        osc.frequency.setValueAtTime(freq, now);
+        gain.gain.setValueAtTime(0.12, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.35);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start(now);
+        osc.stop(now + 0.35);
+      });
+    }
+
+    function playAcousticChord(freq) {
+      const ctx = getAudioCtx();
+      const now = ctx.currentTime;
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.type = 'triangle';
+      osc.frequency.setValueAtTime(freq, now);
+      gain.gain.setValueAtTime(0.18, now);
+      gain.gain.exponentialRampToValueAtTime(0.001, now + 1.0);
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.start(now);
+      osc.stop(now + 1.0);
+    }
+
+    // 1. PINK THAR MODAL
+    const claimGiftBtn = document.getElementById('claimGiftBtn');
+    const giftModal = document.getElementById('giftModal');
+    const modalCard = document.getElementById('modalCard');
+    const closeModalBtn = document.getElementById('closeModalBtn');
+    const hornBtn = document.getElementById('hornBtn');
+    const dipperBtn = document.getElementById('dipperBtn');
+    const beamLeft = document.getElementById('beamLeft');
+    const beamRight = document.getElementById('beamRight');
+    const miniCooperToggle = document.getElementById('miniCooperToggle');
+    const cooperNotice = document.getElementById('cooperNotice');
+
+    claimGiftBtn.addEventListener('click', () => {
+      giftModal.classList.remove('hidden');
+      setTimeout(() => {
+        giftModal.classList.remove('opacity-0');
+        modalCard.classList.remove('scale-95');
+        modalCard.classList.add('scale-100');
+      }, 10);
+      pinkConfetti({ particleCount: 75, spread: 65, origin: { y: 0.6 } });
+    });
+
+    function hideModal() {
+      giftModal.classList.add('opacity-0');
+      modalCard.classList.remove('scale-100');
+      modalCard.classList.add('scale-95');
+      setTimeout(() => giftModal.classList.add('hidden'), 250);
+    }
+
+    closeModalBtn.addEventListener('click', hideModal);
+    giftModal.addEventListener('click', (e) => {
+      if (e.target === giftModal) hideModal();
+    });
+
+    hornBtn.addEventListener('click', () => {
+      playHornSound();
+      pinkConfetti({ particleCount: 25, spread: 45, origin: { y: 0.5 } });
+    });
+
+    let lightsOn = false;
+    dipperBtn.addEventListener('click', () => {
+      lightsOn = !lightsOn;
+      beamLeft.style.opacity = lightsOn ? '0.85' : '0';
+      beamRight.style.opacity = lightsOn ? '0.85' : '0';
+      document.getElementById('lightLeft').setAttribute('fill', lightsOn ? '#ffffff' : 'url(#headlightGlow)');
+      document.getElementById('lightRight').setAttribute('fill', lightsOn ? '#ffffff' : 'url(#headlightGlow)');
+    });
+
+    miniCooperToggle.addEventListener('click', () => {
+      cooperNotice.classList.toggle('hidden');
+    });
+
+    // 2. SHORT, MEANINGFUL & CONNECTED OBSERVATIONS
+    const auditJokes = [
+      {
+        title: "🕵️‍♀️ Observation #1: Deloitte ne ek Masoom bachhe ko overburden kr rkha",
+        body: "\"Chutti Vaale din bi Srishti ko kaam krna pdtaaa.. kamchori sikhani pdegi 🤫\"",
+        risk: "Priority: More Chutti Needed 🌸"
+      },
+      {
+        title: "💭 Observation #2: Choti-Choti Baaton Pe Overthinking",
+        body: "\"Duniya bhar ki tension ek taraf aur tumhari overthinking ek taraf! Jitni achii insan tum ho, in future life me sab bohot acha hi hoga ✨ aur achhe ki shuruat hmari dosti se hochuki hai! 🤭💖\"",
+        risk: "Verdict: Zero Stress Allowed Today 💖"
+      }
+    ];
+
+    let currentJokeIdx = 0;
+    const jokeTitle = document.getElementById('jokeTitle');
+    const jokeBody = document.getElementById('jokeBody');
+    const jokeRiskTag = document.getElementById('jokeRiskTag');
+    const jokeCounterTag = document.getElementById('jokeCounterTag');
+    const nextJokeBtn = document.getElementById('nextJokeBtn');
+
+    nextJokeBtn.addEventListener('click', () => {
+      currentJokeIdx = (currentJokeIdx + 1) % auditJokes.length;
+      const j = auditJokes[currentJokeIdx];
+      jokeTitle.innerText = j.title;
+      jokeBody.innerText = j.body;
+      jokeRiskTag.innerText = j.risk;
+      jokeCounterTag.innerText = `Note #${currentJokeIdx + 1} of ${auditJokes.length}`;
+      playAcousticChord(392 + (currentJokeIdx * 25));
+      if (currentJokeIdx === auditJokes.length - 1) {
+        pinkConfetti({ particleCount: 40, spread: 55, origin: { y: 0.6 } });
+      }
+    });
+
+    // 3. SONG CONTROLLER (0:00 - 01:18 TRIM)
+    const birthdaySong = document.getElementById('birthdaySong');
+    const playSongBtn = document.getElementById('playSongBtn');
+    const playIcon = document.getElementById('playIcon');
+    const playBtnText = document.getElementById('playBtnText');
+    const audioProgressBar = document.getElementById('audioProgressBar');
+    const currentTimeLabel = document.getElementById('currentTimeLabel');
+    const serenadeLyric = document.getElementById('serenadeLyric');
+    const equalizer = document.getElementById('equalizer');
+
+    const songDurationCap = 78; // 01:18 in seconds
+
+    const lyricsMoments = [
+      { t: 0,  text: "🎶 'Happy Birthday to you ji... cake shake hai to fir bulao ji!' 🎂" },
+      { t: 10, text: "🎶 'Aise hi tum buddhe hote rahoge, humko usse kya matlab batao ji!' 🤭" },
+      { t: 16, text: "🎶 'Happy Birthday to you haan ji... toh ispe itne khush kyu ho ae bhai?' 🌸" },
+      { t: 22, text: "🎶 'Tum to barso pehle hi nikal chuke ho, to b'day wala natak yeh kyu hai bhai?' 🎀" },
+      { t: 29, text: "🎶 'Candle shandle phoonk se bujha ke, besuron ki bheed faltu me lagwa ke...' ✨" },
+      { t: 41, text: "🎶 'Yeh sab nautanki fir bhi chalo jhel lein, cake shake aur starters bhar bhar ke aaye plate me!' 🍰" },
+      { t: 54, text: "🎶 'Happy Birthday to you ji... soch samajh ke invite bhijwao ji!' 💌" },
+      { t: 59, text: "🎶 'Agar pet pooja ka full intezaam hai, to hi nyota consider karenge ji!' 😋" },
+      { t: 66, text: "🎶 'Happy Birthday to you keh diya hai ji... tum aur bhi buddhe ho gaye, oh teri!' 💖" },
+      { t: 72, text: "🎶 'Dil chhota na karo, umra ka hai kya... Happy Birthday Priye Dost!' 🌻" }
+    ];
+
+    function formatTime(s) {
+      const mins = Math.floor(s / 60);
+      const secs = Math.floor(s % 60);
+      return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+    }
+
+    function updateLyrics(currentTime) {
+      for (let i = lyricsMoments.length - 1; i >= 0; i--) {
+        if (currentTime >= lyricsMoments[i].t) {
+          serenadeLyric.innerText = lyricsMoments[i].text;
+          break;
+        }
+      }
+    }
+
+    let eqInterval = null;
+    function startEqualizer() {
+      equalizer.classList.remove('opacity-50');
+      equalizer.classList.add('opacity-100');
+      eqInterval = setInterval(() => {
+        Array.from(equalizer.children).forEach(bar => {
+          const randH = Math.floor(Math.random() * 32) + 8;
+          bar.style.height = `${randH}px`;
+        });
+      }, 120);
+    }
+
+    function stopEqualizer() {
+      clearInterval(eqInterval);
+      equalizer.classList.remove('opacity-100');
+      equalizer.classList.add('opacity-50');
+    }
+
+    function stopSongAtCap() {
+      birthdaySong.pause();
+      birthdaySong.currentTime = 0;
+      playIcon.innerText = '▶️';
+      playBtnText.innerText = 'Play Birthday Song';
+      stopEqualizer();
+      pinkConfetti({ particleCount: 65, spread: 70, origin: { y: 0.6 } });
+    }
+
+    birthdaySong.addEventListener('timeupdate', () => {
+      const cur = birthdaySong.currentTime;
+      currentTimeLabel.innerText = formatTime(cur);
+      audioProgressBar.style.width = `${Math.min(100, (cur / songDurationCap) * 100)}%`;
+      updateLyrics(cur);
+
+      if (cur >= songDurationCap) {
+        stopSongAtCap();
+      }
+    });
+
+    birthdaySong.addEventListener('ended', stopSongAtCap);
+
+    playSongBtn.addEventListener('click', () => {
+      if (birthdaySong.paused) {
+        birthdaySong.play().then(() => {
+          playIcon.innerText = '⏸️';
+          playBtnText.innerText = 'Pause';
+          startEqualizer();
+        }).catch(() => {
+          serenadeLyric.innerText = "💡 Audio file 'Happy Birthday To You Ji - DjBaap.mp3' not found in folder!";
+          playAcousticChord(330);
+        });
+      } else {
+        birthdaySong.pause();
+        playIcon.innerText = '▶️';
+        playBtnText.innerText = 'Play Birthday Song';
+        stopEqualizer();
+      }
+    });
+  </script>
+</body>
+</html>
